@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SewaActivity">
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/text_sewa_kendaraan"
+        android:text="Sewa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50px"/>
+
+    <ScrollView
+        android:layout_below="@id/text_sewa_kendaraan"
+        android:layout_above="@+id/layoutBawah"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="50px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNamaKendaraan"
+                    android:text="Nama Kendaraan"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtMerk"
+                    android:text="Jenis Kendaraan"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txtCc"
+                    android:text="CC"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtHargaSewa"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="10dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="Lama Pinjam : "
+                        android:textSize="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/btn_tambah_sewa"
+                        android:text="+"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:padding="5dp"
+                        android:id="@+id/txt_lama_pinjam_sewa"
+                        android:textSize="14dp"
+                        android:text="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:padding="5dp"
+                        android:textSize="14dp"
+                        android:text="Hari"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/btn_kurang_sewa"
+                        android:text="--"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_total_sewa"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14dp"
+                    android:text="Total Harga Sewa: Rp.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Penyewa"
+                    android:padding="5dp"
+                    android:layout_margin="10dp"
+                    android:textSize="25dp"
+                    android:textColor="#FFFFFF"
+                    android:background="#43BD2E"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtNamaPenyewa"
+                        android:hint="Nama Penyewa"
+                        android:padding="10dp"
+                        android:textSize="14dp"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textColorHint="?android:attr/textColorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtNomorKtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textColorHint="?android:attr/textColorPrimary"
+                        android:textSize="14dp"
+                        android:padding="10dp"
+                        android:hint="Nomor Ktp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBawah"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnSewa"
+            android:text="Sewa"
+            android:textColor="#FEFEFE"
+            android:background="#43425D"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:textColor="#FEFEFE"
+            android:id="@+id/btnBatal"
+            android:background="#3B85FE"
+            android:text="Batal"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

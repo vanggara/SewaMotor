@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <TextView
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_marginTop="16dp"
+        android:id="@+id/text_tambah_kendaraan"
+        android:text="Edit Profil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50px"/>
+
+    <ScrollView
+        android:layout_below="@id/text_tambah_kendaraan"
+        android:layout_above="@+id/layoutBawah"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="50px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNama"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColorHint="?android:attr/textColorPrimary"
+                    android:hint="Nama"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:hint="Email"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColorHint="?android:attr/textColorPrimary"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:text="Foto Akun"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/imgFoto"
+                android:background="#E7E7E7"
+                android:layout_width="120dp"
+                android:layout_height="120dp"/>
+
+            <Button
+                android:layout_marginVertical="4dp"
+                android:id="@+id/ambilFotoAkun"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Ambil Foto"
+                android:textSize="10sp"
+                android:textColor="#FEFEFE"
+                android:background="#4CAF50"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBawah"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:text="SIMPAN"
+            android:textColor="#FEFEFE"
+            android:background="#43425D"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:textColor="#FEFEFE"
+            android:id="@+id/btnBatalEdt"
+            android:background="#3B85FE"
+            android:text="BATAL"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

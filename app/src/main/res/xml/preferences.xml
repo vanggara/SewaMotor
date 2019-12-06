@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Ganti Mode">
+        <SwitchPreferenceCompat
+            android:key="mode"
+            android:defaultValue="true"
+            android:title="Dark Mode"
+            android:summary="Background menjadi gelap."/>
+    </PreferenceCategory>
+</PreferenceScreen>

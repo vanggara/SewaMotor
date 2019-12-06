@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/cardView"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:layout_margin="5dp"
+    android:foreground="?android:attr/selectableItemBackground">
+    <LinearLayout
+        android:layout_margin="20px"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/logo"
+            android:background="#CCCCCC"
+            android:layout_width="10dp"
+            android:layout_weight="2"
+            android:layout_height="155dp"/>
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_marginTop="20px"
+            android:scrollbars="vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/namaKendaraan"
+                android:text="Nama Kendaraan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txtMerk"
+                android:text="Merk Kendaraan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txtHargaSewa"
+                android:text="Harga Sewa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txtCc"
+                android:text="Lokasi Kendaraan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
